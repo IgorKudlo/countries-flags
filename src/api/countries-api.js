@@ -8,4 +8,7 @@ export const countriesAPI = {
     getCountries() {
         return instance.get('all?fields=name,capital,flags,population,region');
     },
+    getCountryByName(name) {
+        return instance.get(`name/${name}`)
+    }
 }
